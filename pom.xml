@@ -10,6 +10,11 @@
     <artifactId>L1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.opencsv</groupId>
@@ -25,6 +30,7 @@
     </dependencies>
 
     <build>
+        <finalName>${project.name}</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -35,7 +41,6 @@
                             <mainClass>ru.otus.java.Main</mainClass>
                         </manifest>
                     </archive>
-                    <finalName>${project.name}_${java.version}</finalName>
                     <appendAssemblyId>false</appendAssemblyId>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
@@ -50,6 +55,33 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>com.github.wvengen</groupId>
+                <artifactId>proguard-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals><goal>proguard</goal></goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <obfuscate>true</obfuscate>
+                    <injar>${project.build.finalName}.jar</injar>
+                    <outjar>${project.build.finalName}-obfuscated.jar</outjar>
+                    <outputDirectory>${project.build.directory}</outputDirectory>
+                    <options>
+                        <option>-dontwarn</option>
+                        <option>-dontshrink</option>
+                        <option>-dontoptimize</option>
+                        <option>-dontnote</option>
+                        <option>-keep class ru.otus.java.Main { *; }</option>
+                    </options>
+                    <libs>
+                        <lib>${java.home}/lib/rt.jar</lib>
+                    </libs>
+                </configuration>
             </plugin>
         </plugins>
     </build>
