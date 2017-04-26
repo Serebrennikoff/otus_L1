@@ -1,0 +1,18 @@
+Starting pid: 5928@Dell
+---------------------------------
+Time passed since last log: 60.19 seconds
+Copy performed 126 collections in 14 seconds
+MarkSweepCompact performed 73 collections in 34 seconds
+---------------------------------
+Time passed since last log: 60.63 seconds
+Copy performed 68 collections in 2 seconds
+MarkSweepCompact performed 78 collections in 47 seconds
+---------------------------------
+Time passed since last log: 60.07 seconds
+Copy performed 34 collections in 0 seconds
+MarkSweepCompact performed 69 collections in 52 seconds
+---------------------------------
+#
+# java.lang.OutOfMemoryError: Java heap space
+# -XX:OnOutOfMemoryError="kill -3 %p"
+#   Executing "kill -3 5928"...

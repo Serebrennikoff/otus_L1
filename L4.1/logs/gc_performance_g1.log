@@ -1,0 +1,30 @@
+Starting pid: 11064@Dell
+---------------------------------
+Time passed since last log: 60.06 seconds
+G1 Young Generation performed 234 collections in 33 seconds
+G1 Old Generation performed 23 collections in 11 seconds
+---------------------------------
+Time passed since last log: 60.59 seconds
+G1 Young Generation performed 197 collections in 27 seconds
+G1 Old Generation performed 27 collections in 25 seconds
+---------------------------------
+Time passed since last log: 61.09 seconds
+G1 Young Generation performed 174 collections in 28 seconds
+G1 Old Generation performed 26 collections in 24 seconds
+---------------------------------
+Time passed since last log: 60.38 seconds
+G1 Young Generation performed 170 collections in 28 seconds
+G1 Old Generation performed 26 collections in 24 seconds
+---------------------------------
+Time passed since last log: 60.00 seconds
+G1 Young Generation performed 159 collections in 26 seconds
+G1 Old Generation performed 26 collections in 25 seconds
+---------------------------------
+Time passed since last log: 60.28 seconds
+G1 Young Generation performed 178 collections in 26 seconds
+G1 Old Generation performed 28 collections in 26 seconds
+---------------------------------
+#
+# java.lang.OutOfMemoryError: Java heap space
+# -XX:OnOutOfMemoryError="kill -3 %p"
+#   Executing "kill -3 11064"...

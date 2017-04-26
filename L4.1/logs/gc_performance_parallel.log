@@ -1,0 +1,30 @@
+Starting pid: 1120@Dell
+---------------------------------
+Time passed since last log: 61.57 seconds
+PS Scavenge performed 89 collections in 22 seconds
+PS MarkSweep performed 25 collections in 35 seconds
+---------------------------------
+Time passed since last log: 60.54 seconds
+PS Scavenge performed 118 collections in 36 seconds
+PS MarkSweep performed 30 collections in 20 seconds
+---------------------------------
+Time passed since last log: 61.14 seconds
+PS Scavenge performed 119 collections in 31 seconds
+PS MarkSweep performed 34 collections in 26 seconds
+---------------------------------
+Time passed since last log: 62.51 seconds
+PS Scavenge performed 43 collections in 9 seconds
+PS MarkSweep performed 28 collections in 50 seconds
+---------------------------------
+Time passed since last log: 62.75 seconds
+PS Scavenge performed 42 collections in 9 seconds
+PS MarkSweep performed 28 collections in 51 seconds
+---------------------------------
+Time passed since last log: 60.71 seconds
+PS Scavenge performed 22 collections in 2 seconds
+PS MarkSweep performed 45 collections in 56 seconds
+---------------------------------
+#
+# java.lang.OutOfMemoryError: GC overhead limit exceeded
+# -XX:OnOutOfMemoryError="kill -3 %p"
+#   Executing "kill -3 1120"...
