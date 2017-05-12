@@ -22,11 +22,11 @@ public class Tester {
 
     private static void testClass(Class<?> classToTest) {
         List<Method> methods = Arrays.asList(classToTest.getMethods());
-        List<Method> beforeAllMethods = MethodFilter.filterMethods(methods, meth -> {return meth.getAnnotation(BeforeAll.class) != null;});
-        List<Method> beforeEachMethods = MethodFilter.filterMethods(methods, meth -> {return meth.getAnnotation(BeforeEach.class) != null;});
-        List<Method> afterEachMethods = MethodFilter.filterMethods(methods, meth -> {return meth.getAnnotation(AfterEach.class) != null;});
-        List<Method> afterAllMethods = MethodFilter.filterMethods(methods, meth -> {return meth.getAnnotation(AfterAll.class) != null;});
-        List<Method> testMethods = MethodFilter.filterMethods(methods, meth -> {return meth.getAnnotation(Test.class) != null;});
+        List<Method> beforeAllMethods = MethodFilter.filterMethods(methods, meth -> meth.getAnnotation(BeforeAll.class) != null);
+        List<Method> beforeEachMethods = MethodFilter.filterMethods(methods, meth -> meth.getAnnotation(BeforeEach.class) != null);
+        List<Method> afterEachMethods = MethodFilter.filterMethods(methods, meth -> meth.getAnnotation(AfterEach.class) != null);
+        List<Method> afterAllMethods = MethodFilter.filterMethods(methods, meth -> meth.getAnnotation(AfterAll.class) != null);
+        List<Method> testMethods = MethodFilter.filterMethods(methods, meth -> meth.getAnnotation(Test.class) != null);
 
         try {
             Object obj = classToTest.newInstance();
