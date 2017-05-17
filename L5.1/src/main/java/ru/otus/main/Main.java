@@ -15,18 +15,24 @@ public class Main {
         Tester.test(Main.class);
     }
 
-    private int counter = 0;
+    private static int counter = 0;
 
     @BeforeAll
-    public void init() {
+    public static void init() {
         System.out.println("--------------------");
         System.out.println("Testing started.");
         System.out.println("--------------------");
         System.out.println();
     }
 
+    @BeforeAll
+    public void failInit() {
+        System.out.println("THIS SHOULD NOT WORK.");
+        System.out.println();
+    }
+
     @AfterAll
-    public void finish() {
+    public static void finish() {
         System.out.println();
         System.out.println("--------------------");
         System.out.println("Testing finished");
@@ -34,12 +40,12 @@ public class Main {
     }
 
     @BeforeEach
-    public void showTestNum() {
+    public static void showTestNum() {
         System.out.println("TEST N." + counter);
     }
 
     @AfterEach
-    public void incCounter() {counter++;}
+    public static void incCounter() {counter++;}
 
     @Test
     public void firstAssertionFalseTest() {
