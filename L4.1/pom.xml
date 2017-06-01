@@ -24,7 +24,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>ru.otus.l4.ru.otus.java.Main</mainClass>
+                            <mainClass>ru.otus.l4.Main</mainClass>
                         </manifest>
                     </archive>
                     <appendAssemblyId>false</appendAssemblyId>
