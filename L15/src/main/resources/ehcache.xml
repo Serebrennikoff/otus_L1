@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+
+    <defaultCache
+            maxEntriesLocalHeap="2"
+            eternal="false"
+            timeToIdleSeconds="5"
+            timeToLiveSeconds="10"
+            statistics="true"
+    />
+
+    <cache
+        name="ru.otus.db_service.data_sets.UserDataSet"
+        maxEntriesLocalHeap="2"
+        eternal="false"
+        timeToIdleSeconds="5"
+        timeToLiveSeconds="10"
+        statistics="true"
+    />
+
+    <cache
+        name="ru.otus.db_service.data_sets.UserDataSet.phone"
+        maxEntriesLocalHeap="2"
+        eternal="false"
+        timeToIdleSeconds="5"
+        timeToLiveSeconds="10"
+        statistics="true"
+    />
+
+    <cache
+        name="ru.otus.db_service.data_sets.PhoneDataSet"
+        maxEntriesLocalHeap="2"
+        eternal="false"
+        timeToIdleSeconds="5"
+        timeToLiveSeconds="10"
+        statistics="true"
+    />
+
+    <cache
+        name="ru.otus.db_service.data_sets.AddressDataSet"
+        maxEntriesLocalHeap="2"
+        eternal="false"
+        timeToIdleSeconds="5"
+        timeToLiveSeconds="10"
+        statistics="true"
+    />
+
+</ehcache>
